@@ -12,4 +12,6 @@ X = data.drop(['id', 'DateTime', 'meal'], axis=1)
 
 model = tree.DecisionTreeClassifier()
 modelFit = model.fit(X, Y)
-pred = modelFit.predict(test_data)
+pred = modelFit.predict(test_data).tolist()
+
+
